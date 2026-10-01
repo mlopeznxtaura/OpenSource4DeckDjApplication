@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenDeck Four</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0a0a0c; --fg:#f4f0ea; --accent:#ff5a36; --muted:#9a948a; --panel:#15151a; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { min-height:100vh; background:linear-gradient(160deg,#1a1210,#0a0a0c 45%); color:var(--fg); font-family:"IBM Plex Mono",monospace; }
+    .shell { max-width:960px; margin:0 auto; padding:9vh 1.4rem 3rem; }
+    h1 { font-family:"Space Grotesk",sans-serif; font-size:clamp(2.8rem,9vw,5.2rem); line-height:.9; }
+    .accent { color:var(--accent); }
+    p.lead { margin-top:1.2rem; color:var(--muted); max-width:36rem; line-height:1.55; }
+    .decks { display:grid; grid-template-columns:repeat(4,1fr); gap:.6rem; margin:2.5rem 0 1.5rem; }
+    .deck { background:var(--panel); border:1px solid #2a2a32; aspect-ratio:1; display:grid; place-items:center; font-family:"Space Grotesk",sans-serif; font-size:1.4rem; }
+    ul { list-style:none; display:grid; gap:.55rem; color:var(--muted); }
+    li::before { content:"▸ "; color:var(--accent); }
+    .note { margin-top:2rem; font-size:.8rem; color:#6f6a62; max-width:40rem; line-height:1.5; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <h1>OpenDeck <span class="accent">Four</span></h1>
+    <p class="lead">Open-source four-deck DJ workstation prototype — audio/video load, EQ, effects, master + crossfade, MIDI hook.</p>
+    <div class="decks"><div class="deck">A</div><div class="deck">B</div><div class="deck">C</div><div class="deck">D</div></div>
+    <ul>
+      <li>Four independent decks with play / pause / stop / seek</li>
+      <li>Per-deck volume, trim, six-band EQ, effect knobs</li>
+      <li>Master volume + crossfade transport</li>
+      <li>Desktop build: PySide6 · sounddevice · librosa · mido</li>
+    </ul>
+    <p class="note">This edge surface hosts the project presence for app19. The mixer itself is a native Qt prototype (`opendeck_four.py`) — clone the repo to run locally with full AV sync.</p>
+  </main>
+</body>
+</html>

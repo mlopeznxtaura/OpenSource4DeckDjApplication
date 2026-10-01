@@ -1,0 +1,4 @@
+﻿name = "nextaura-app19"
+main = "src/worker.js"
+compatibility_date = "2026-06-17"
+routes = [ { pattern = "app19.nextaura.fit", custom_domain = true } ]
